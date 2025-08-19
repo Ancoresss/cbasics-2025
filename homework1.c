@@ -4,7 +4,7 @@
 int main() {
   int number;
 
-  printf("Введіть число: ");
+  printf("Введіть ціле число: ");
   scanf("%d", &number);
   number = number*3;
   printf("Результат множення: %d\n", number);
