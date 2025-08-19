@@ -2,12 +2,12 @@
 #include <math.h>
 
 int main() {
-  int number;
+  float number;
 
-  printf("Введіть ціле число: ");
-  scanf("%d", &number);
+  printf("Enter the number: ");
+  scanf("%f", &number);
   number = number*3;
-  printf("Результат множення: %d\n", number);
+  printf("Result:%f\n", number);
 
   return 0;
 }
