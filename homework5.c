@@ -2,30 +2,30 @@
 #include <math.h>
 #include <stdbool.h>
 int main() {
-float a;
-float b;
-float c;
+int a;
+int b;
+int c;
 printf("Enter first number:");
-scanf("%f", &a);
+scanf("%d", &a);
 printf("Enter second number:");
-scanf("%f", &b);
+scanf("%d", &b);
 printf("Enter third number:");
-scanf("%f", &c);
+scanf("%d", &c);
 	if (a==b || a==b) { //if there is aspon jedna rovnost
 		if (b>=c) {
-		printf("The largest number is:%f\n", b);
+		printf("The largest number is:%d\n", b);
 	}       else {
-                printf("The largest number is:%f\n", c);	
+                printf("The largest number is:%d\n", c);	
       }} else if (a>b) {
                 if (c>a) {
-		printf("The largest number is:%f\n", c);
+		printf("The largest number is:%d\n", c);
 	}       else{
-		printf("The largest number is:%f\n", a);
+		printf("The largest number is:%d\n", a);
 	}} else {
 		if(c>b) {
-		printf("The largest number is:%f\n", c);
+		printf("The largest number is:%d\n", c);
 	}       else {
-		printf("The largest number is:%f\n", b);
+		printf("The largest number is:%d\n", b);
 	}}
 return 0;
 
