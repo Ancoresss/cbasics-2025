@@ -9,7 +9,7 @@ scanf("%d", &numbers[2]);
 scanf("%d", &numbers[3]);
 scanf("%d", &numbers[4]);
 
-for (int i = 5 - 1; i >= 0; i--) {
+for (int i = 4; i >= 0; i--) {
 	printf("%d\n", numbers[i]);
 }
 
