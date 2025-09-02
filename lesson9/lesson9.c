@@ -14,7 +14,6 @@ int min =a[0][0];
 }
 
 
-
 int main(){
 int array[3][3]={{1, 6, 13},{8, 7, 20},{31, -3, 5}};
 printf("%d\n", minElement(array));
