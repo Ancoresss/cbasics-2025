@@ -17,7 +17,7 @@ int main ()
 
     printf("your time is:\n");
 
-    printf("%d hours, %d minutes, %d seconds\n",times[0], times[1], times[2]);
+    printf("%d:%d:%d\n",times[0], times[1], times[2]);
 
 
     return 0;
