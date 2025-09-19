@@ -8,6 +8,8 @@ int empty = sizeof(word);
 int count_of_correct_letters = 0;
 int count_of_tryes = sizeof(word);
 int count_of_used_letters = 0;
+int count_of_match;
+int exessive = 0; 
 
 
 void available_letters() {
@@ -32,8 +34,8 @@ void entry_field(char letter, char stroka[]){
     for (int i = 0; i < len_of_word - 1; i++){
         if (word[i]==letter){
             for(int j = 0; j < len_of_word - 1; j++){
-                if(used_letters[i] == letter){
-                    continue;;
+                if(used_letters[j] == letter){
+                    exessive++;
                 } else {
                     stroka[i] = letter;
                     count_of_correct_letters++;
@@ -42,12 +44,14 @@ void entry_field(char letter, char stroka[]){
             }
         } 
     }
-    if(count_of_correct_letters == 0){
-            printf("Here is no this letter\n");
+    
+    if(count_of_correct_letters == 0 || exessive > 0){
+            printf("Here is no this letter or you already found this letter\n");
             count_of_tryes--;
     } else {
         printf("Congratulations! You found a letter\n");
     }
+    
     for (int i = 0; i < len_of_word - 1; i++){
         if(stroka[i]=='_'){
             empty++;
@@ -60,6 +64,7 @@ void entry_field(char letter, char stroka[]){
     used_letters[count_of_used_letters] = letter;
     count_of_used_letters++;
     count_of_correct_letters = 0;
+    exessive = 0;
     
 } // визначає місце де має бути буква, виводить те що вже розгадано або ще ні і шо вона ще тіки не робить
 
@@ -73,6 +78,7 @@ char stroka[len_of_word];
     }
     
 printf("Welcome to the game, Hangman!\n");
+printf("I guess the word which have %d letters\n", len_of_word);
 while(empty != 0 && count_of_tryes > 0){
     printf("List of available letters: ");
     available_letters();
@@ -84,7 +90,7 @@ while(empty != 0 && count_of_tryes > 0){
     printf("\n");
     } 
 if(empty == 0){
-    printf("You won\n");
+    printf("You won!\n");
 } else {
     printf("You use all of the tryes\n");
 }
