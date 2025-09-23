@@ -45,9 +45,11 @@ void entry_field(char letter, char stroka[]){
         } 
     }
     
-    if(count_of_correct_letters == 0 || exessive > 0){
-            printf("Here is no this letter or you already found this letter\n");
+    if(count_of_correct_letters == 0){
+            printf("Here is no this letter\n");
             count_of_tryes--;
+    } else if (exessive > 0){
+        printf("You alredy found this letter\n");
     } else {
         printf("Congratulations! You found a letter\n");
     }
